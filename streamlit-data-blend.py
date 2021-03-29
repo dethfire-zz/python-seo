@@ -10,7 +10,16 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">SEO Data Blender</p>', unsafe_allow_html=True)
+
+st.markdown("""
+<p class="big-font">SEO Data Blender</p>
+<b>Directions: </b></ br><ol>
+<li>Export Performance data (90 days clicks, impressions, CTR, positon) in Google Search Console. Save as gsc.csv</li>
+<li>Export Google Analytics Landing Page Data (90 days, 1000 items) Save as analytics.xlsx</li>
+<li>Export Ahrefs Top Pages Data (Full, UTF-8) Save as ahrefs.csv</li>
+<li>Export Screaming Frog Crawl. HTML only. Save as sf.csv</li></ol>
+""", unsafe_allow_html=True)
+
 
 domain = st.text_input('Your Root Domain URL','ex https://www.yourdomain.com')
 
