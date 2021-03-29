@@ -2,7 +2,15 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 
-st.write('SEO Data Blender')
+st.markdown("""
+<style>
+.big-font {
+    font-size:50px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<p class="big-font">SEO Data Blender</p>', unsafe_allow_html=True)
 
 domain = st.text_input('Your Root Domain URL','ex https://www.yourdomain.com')
 
