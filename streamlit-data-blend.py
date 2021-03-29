@@ -56,4 +56,4 @@ if get_gsc_file is not None and get_ga_file is not None and get_ahrefs_file is n
     if st.button("Download Blended Data CSV"):
         df_final.to_csv("Ahrefs-GSC-GA-SF-DataBlend.csv")
 
-st.write('Author: <a href="https://twitter.com/GregBernhardt4">Greg Bernhardt</a> | Friends: <a href="https://www.rocketclicks.com">Rocket Clicks</a> and <a href="https://www.physicsforums.com">Physics Forums</a>')
+st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [Rocket Clicks](https://www.rocketclicks.com) and [Physics Forums](https://www.physicsforums.com)')
