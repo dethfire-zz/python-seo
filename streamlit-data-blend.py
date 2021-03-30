@@ -14,10 +14,10 @@ st.markdown("""
 st.markdown("""
 <p class="big-font">SEO Data Blender</p>
 <b>Directions: </b></ br><ol>
-<li>Export Performance data (90 days clicks, impressions, CTR, positon) in Google Search Console. Save as gsc.csv</li>
-<li>Export Google Analytics Landing Page Data (90 days, 1000 items) Save as analytics.xlsx</li>
-<li>Export Ahrefs Top Pages Data (Full, UTF-8) Save as ahrefs.csv</li>
-<li>Export Screaming Frog Crawl. HTML only. Save as sf.csv</li></ol>
+<li>Export Performance data (60 days clicks, impressions, CTR, positon) in Google Search Console. Upload pages.csv from the zip file.</li>
+<li>Export Google Analytics Landing Page Data (60 days, 1000 items).</li>
+<li>Export Ahrefs Top Pages Data (Full, UTF-8).</li>
+<li>Export Screaming Frog Crawl. HTML only.</li></ol>
 """, unsafe_allow_html=True)
 
 
