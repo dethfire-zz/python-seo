@@ -49,20 +49,20 @@ if get_gsc_file is not None and get_ga_file is not None and get_ahrefs_file is n
     df_sf.rename(columns={"Title 1": "Title"}, inplace = True)
     
     # Join GSC and GA dataframes
-    df_gsc_ga = pd.merge(df_gsc, df_ga, left_on='Top Pages', right_on='Landing Page', how='inner')
+    df_gsc_ga = pd.merge(df_gsc, df_ga, left_on='Top pages', right_on='Landing Page', how='inner')
     
     # Join GSC/GA and ScreamingFrog dataframes
-    df_gsc_ga_sf = pd.merge(df_gsc_ga, df_sf, left_on='Top Pages', right_on='Address', how='inner')
+    df_gsc_ga_sf = pd.merge(df_gsc_ga, df_sf, left_on='Top pages', right_on='Address', how='inner')
     
     # Join GSC/GA/SF and ahrefs dataframes
-    df_final = pd.merge(df_gsc_ga_sf, df_ahrefs, left_on='Top Pages', right_on='URL', how='inner')
+    df_final = pd.merge(df_gsc_ga_sf, df_ahrefs, left_on='Top pages', right_on='URL', how='inner')
     
     # Filter final dataframe
     #df_final = df_final[df_final['Page'].str.contains('education') & (df_final['Word Count'] > 1000)]
     df_final.sort_values(by=['Clicks'], ascending=False)
     df_final = df_final[ ['Title'] + ['URL'] + ['Keywords'] + [col for col in df_final.columns if col != 'Title' and col != 'Keywords' and col != 'URL']]
     df_final['URL'] = df_final['URL'].replace({domain:''}, regex=False)
-    df_final.drop(['Landing Page', 'Top Pages' ,'Address'], axis=1, inplace=True)
+    df_final.drop(['Landing Page', 'Top pages' ,'Address'], axis=1, inplace=True)
     df_final.reset_index()
     
     cm = sns.light_palette("green",as_cmap=True)
